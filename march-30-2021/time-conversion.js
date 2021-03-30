@@ -11,7 +11,6 @@ function timeConversion(s) {
 
   if (hh < 12 && letters === "PM") {
     hh += 12;
-    letters = "PM";
   }
   if (hh === 12 && letters === "AM") {
     hh = 0;
