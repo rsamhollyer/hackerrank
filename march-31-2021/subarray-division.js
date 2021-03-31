@@ -18,6 +18,8 @@ let m = 7;
 // MORE EFFICIENT SLIDING WINDOW TECHNIQUE
 
 function birthday(s, d, m) {
+  if (m > s.length || m > 12 || m < 1) return 0;
+
   let counter = 0;
   let sum = 0;
 
