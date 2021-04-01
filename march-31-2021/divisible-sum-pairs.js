@@ -14,6 +14,7 @@ function divisibleSumPairs(n, k, ar) {
 
   for (let i = 0; i < n; i++) {
     const modValue = ar[i] % k;
+
     if (hashMap[(k - modValue) % k]) {
       count += hashMap[(k - modValue) % k];
     }
