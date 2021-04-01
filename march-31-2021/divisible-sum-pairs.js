@@ -18,9 +18,13 @@ function divisibleSumPairs(n, k, ar) {
       count += hashMap[(k - modValue) % k];
     }
 
-    if (hashMap[modValue]) {
-      hashMap[modValue]++;
-    } else hashMap[modValue] = 1;
+    hashMap[modValue] = (hashMap[modValue] || 0) + 1;
+
+    // if (hashMap[modValue]) {
+    //   hashMap[modValue]++;
+    // } else {
+    //   hashMap[modValue] = 1;
+    // }
   }
   return count;
 }
