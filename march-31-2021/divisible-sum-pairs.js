@@ -14,9 +14,24 @@ function divisibleSumPairs(n, k, ar) {
 
   for (let i = 0; i < n; i++) {
     const modValue = ar[i] % k;
-
+    console.log(`MODVALUE : ${modValue}`);
+    console.log();
     if (hashMap[(k - modValue) % k]) {
+      console.log(`INSIDE IF STATEMENT`);
+      console.log(`K : ${k}`);
+      console.log();
+      console.log(`MODVALUE : ${modValue}`);
+      console.log();
+      console.log(
+        `COMPLEMENT : ${k - modValue} % ${k} = ${(k - modValue) % k}`
+      );
+      console.log();
+      console.log(`HASHMAP: ${JSON.stringify(hashMap)}`);
+      console.log();
       count += hashMap[(k - modValue) % k];
+      console.log(`COUNT : ${count}`);
+      console.log();
+      console.log(`OUTSIDE IF STATEMENT`);
     }
 
     hashMap[modValue] = (hashMap[modValue] || 0) + 1;
