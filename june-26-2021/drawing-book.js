@@ -25,3 +25,8 @@ function fromTheFront(p) {
   }
   return pageCount;
 }
+
+function pageCountSimple(n, p) {
+  return Math.min(p / 2, n / 2 - p / 2);
+}
+console.log(pageCountSimple(6, 5));
